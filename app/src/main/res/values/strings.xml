@@ -4,4 +4,7 @@
     <string name="accounts_tab">Accounts</string>
     <string name="contact_button">Contact</string>
     <string name="locate_button">Locate</string>
+    <string name="close_window_button">Close Window</string>
+    <string name="call_us">Call Us at 603-555-555</string>
+    <string name="email_us">Email us at help@wildcatbank.com</string>
 </resources>
