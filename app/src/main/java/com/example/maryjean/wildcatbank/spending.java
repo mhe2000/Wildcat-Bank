@@ -17,7 +17,7 @@ public class spending extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.fragment_spending,container,false);
+        View v =inflater.inflate(R.layout.spending,container,false);
         return v;
     }
 }

@@ -17,7 +17,7 @@ public class accounts extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.fragment_accounts,container,false);
+        View v =inflater.inflate(R.layout.accounts,container,false);
         return v;
     }
 }
