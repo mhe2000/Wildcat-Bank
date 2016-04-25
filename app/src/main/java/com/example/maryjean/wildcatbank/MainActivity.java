@@ -2,7 +2,6 @@ package com.example.maryjean.wildcatbank;
 
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
@@ -19,13 +18,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.TextView;
-
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-
-import java.util.ResourceBundle;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
      * may be best to switch to a
      * {@link FragmentStatePagerAdapter}.
      */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
+    //private SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -58,17 +53,40 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        //mSectionsPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(),);
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_account_balance_black_24dp));
+
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.account_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.transfers_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.deposits_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.payment_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.spending_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.location_icon));
 
         //tabLayout.setupWithViewPager(mViewPager);
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        final PagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
 
+        mViewPager.setAdapter(adapter);
+
+        mViewPager.addOnPageChangeListener(new
+                TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.setOnTabSelectedListener(new
+                TabLayout.OnTabSelectedListener() {
+                    @Override
+                public void onTabSelected(TabLayout.Tab tab){
+                        mViewPager.setCurrentItem(tab.getPosition());
+                    }
+
+                    @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+
+                    }
+                });
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -170,77 +188,9 @@ public class MainActivity extends AppCompatActivity {
             return rootView;
         }
     }
+}
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-        private String mContext;
-
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below)
-            switch (position) {
-                case 0:
-                    return new accounts();
-                case 1:
-                    return new transfers();
-                case 2:
-                    return new deposits();
-                case 3:
-                    return new payments();
-                case 4:
-                    return new spending();
-                case 5:
-                    return new location();
-            }
-            return null;
-            //return PlaceholderFragment.newInstance(position + 1);
-        }
-
-        @Override
-        public int getCount() {
-            // Show 6 total pages.
-            return 6;
-        }
-
-        public int getIcon(int position) {
-            switch (position) {
-                case 0:
-                    return R.drawable.ic_account_balance_black_24dp;
-            }
-
-            return R.drawable.ic_account_balance_black_24dp;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "Accounts";
-                case 1:
-                    return "Transfers";
-                case 2:
-                    return "Deposits";
-                case 3:
-                    return "Payments";
-                case 4:
-                    return "Spending";
-                case 5:
-                    return "Location";
-            }
-            return null;
-        }
-
-
-
-
-    }
-}

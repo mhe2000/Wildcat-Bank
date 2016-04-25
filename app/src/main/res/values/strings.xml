@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Wildcat Bank</string>
     <string name="action_settings">Settings</string>
+    <string name="accounts_tab">Accounts</string>
+    <string name="contact_button">Contact</string>
+    <string name="locate_button">Locate</string>
 </resources>
