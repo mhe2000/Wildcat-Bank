@@ -68,26 +68,30 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.location_icon));
 
         //tabLayout.setupWithViewPager(mViewPager);
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         final PagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
 
-        mViewPager.setAdapter(adapter);
+        viewPager.setAdapter(adapter);
 
-        mViewPager.addOnPageChangeListener(new
+        viewPager.addOnPageChangeListener(new
                 TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
         tabLayout.setOnTabSelectedListener(new
                 TabLayout.OnTabSelectedListener() {
-                    @Override
-                public void onTabSelected(TabLayout.Tab tab){
-                        mViewPager.setCurrentItem(tab.getPosition());
-                    }
+            @Override
+            public void onTabSelected(TabLayout.Tab tab){
+                mViewPager.setCurrentItem(tab.getPosition());
+            }
 
-                    @Override
-                public void onTabReselected(TabLayout.Tab tab) {
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
 
-                    }
-                });
+            }
+
+            @Override
+            public  void onTabReselected(TabLayout.Tab tab){
+
+            }
+        });
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
