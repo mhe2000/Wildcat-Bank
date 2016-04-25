@@ -26,9 +26,9 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 accounts tab1 = new accounts();
                 return tab1;
-            case 1:
-                transfers tab2 = new transfers();
-                return tab2;
+//            case 1:
+//                transfers tab2 = new transfers();
+//                return tab2;
             case 2:
                 deposits tab3 = new deposits();
                 return tab3;
