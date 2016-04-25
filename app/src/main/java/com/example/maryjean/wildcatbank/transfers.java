@@ -31,7 +31,7 @@ public class transfers extends Fragment {
     }
 
     public void showDialogOnButtonClick() {
-        btn = (Button) findViewByID(R.id.date_pick_button);
+        btn = (Button) findViewById(R.id.date_pick_button);
 
         btn.setOnClickListener(
             new View.OnClickListener() {
