@@ -3,8 +3,8 @@ package com.example.maryjean.wildcatbank;
 /**
  * Created by Maryjean on 5/1/2016.
  */
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 /**

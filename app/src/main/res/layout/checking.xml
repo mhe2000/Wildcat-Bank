@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checking"
+        android:id="@+id/checking_textView"
+        android:textSize="25dp"
+        android:textColor="#ffffffff"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:background="#2b1ec2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pending"
+        android:id="@+id/checking_pending_textView"
+        android:textSize="15dp"
+        android:textColor="#ffffffff"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:background="#2b1ec2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/checking_textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="April 28, 2016"
+        android:id="@+id/date1_textView"
+        android:textSize="15dp"
+        android:textColor="#ffffffff"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:background="#2b1ec2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apris 30, 2016"
+        android:id="@+id/date2_textView"
+        android:textSize="15dp"
+        android:textColor="#ffffffff"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:background="#2b1ec2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="110dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/checking_textView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/checking_textView"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

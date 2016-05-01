@@ -19,4 +19,97 @@
         android:background="#2b1ec2"
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/barGraph"
+        android:contentDescription="barGraph"
+        android:src="@drawable/bargraph"
+        android:layout_below="@+id/spending_textView"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/pieGraph" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pieGraph"
+        android:src="@drawable/piegraph"
+        android:layout_alignBottom="@+id/barGraph"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="41dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastMonthTag"
+        android:text="Last Month"
+        android:layout_alignTop="@+id/thisMonthTag"
+        android:layout_toStartOf="@+id/thisMonthTag" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thisMonthTag"
+        android:text="This Month"
+        android:layout_below="@+id/barGraph"
+        android:layout_toEndOf="@+id/groceryTag" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/groceryTag"
+        android:layout_below="@+id/lastMonthTag"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="58dp"
+        android:text="Groceries"
+        android:textSize="25dp"
+        android:textColor="#3662a0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billTag"
+        android:text="Bills"
+        android:layout_below="@+id/groceryTag"
+        android:layout_alignParentStart="true"
+        android:textColor="#ed1919"
+        android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/luxaryTag"
+        android:text="Luxary"
+        android:layout_below="@+id/billTag"
+        android:layout_alignParentStart="true"
+        android:textColor="#53bb3c"
+        android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/groceryAmount"
+        android:layout_alignBottom="@+id/groceryTag"
+        android:layout_alignParentEnd="true"
+        android:text="$635.00"
+        android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billAmount"
+        android:layout_below="@+id/groceryAmount"
+        android:layout_alignParentEnd="true"
+        android:text="$744.00"
+        android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/luxaryAmount"
+        android:layout_below="@+id/billAmount"
+        android:layout_alignParentEnd="true"
+        android:text="$233.00"
+        android:textSize="25dp" />
 </RelativeLayout>

@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Payments"
-        android:id="@+id/payments_textView"
+        android:id="@+id/wildcatBankView"
         android:textSize="25dp"
         android:textColor="#ffffffff"
         android:layout_alignParentTop="true"
@@ -18,4 +18,69 @@
         android:background="#2b1ec2"
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/payFromLabel"
+        android:text="Pay From"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/wildcatBankView"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toLabel"
+        android:layout_marginTop="44dp"
+        android:text="Pay To"
+        android:layout_below="@+id/payFromLabel"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Type"
+        android:id="@+id/fromAccountType"
+        android:checked="false"
+        android:layout_alignBottom="@+id/payFromLabel"
+        android:layout_toEndOf="@+id/reviewPaymentButton" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill"
+        android:id="@+id/billType"
+        android:checked="false"
+        android:layout_alignTop="@+id/toLabel"
+        android:layout_alignEnd="@+id/fromAccountType" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/paymentAmount"
+        android:layout_below="@+id/toLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="56dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountLabel"
+        android:layout_alignTop="@+id/paymentAmount"
+        android:layout_alignParentStart="true"
+        android:text="Amount" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review Payment"
+        android:id="@+id/reviewPaymentButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:textColor="#ffffffff"
+        android:background="#2b1ec2" />
 </RelativeLayout>

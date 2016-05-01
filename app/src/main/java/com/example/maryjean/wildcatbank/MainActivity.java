@@ -89,7 +89,12 @@ public class MainActivity extends AppCompatActivity {
         public void onTabReselected(TabLayout.Tab tab){
 
             }
-        });
+        });}
+
+    public void launchDialog(View view){
+        android.app.FragmentManager fm = getFragmentManager();
+        contact_us dialog = new contact_us();
+        dialog.show(fm, "fragment_contact_us");
 
         //tabLayout.setupWithViewPager(mViewPager);
 

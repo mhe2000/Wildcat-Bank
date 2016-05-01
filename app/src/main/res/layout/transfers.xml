@@ -18,4 +18,71 @@
         android:background="#2b1ec2"
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/payFromLabel"
+        android:text="Transfer From"
+        android:layout_below="@+id/transfers_textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toLabel"
+        android:layout_marginTop="44dp"
+        android:text="Transfer To"
+        android:layout_below="@+id/payFromLabel"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Type"
+        android:id="@+id/fromAccount"
+        android:checked="false"
+        android:layout_alignTop="@+id/payFromLabel"
+        android:layout_alignStart="@+id/billType" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Type"
+        android:id="@+id/billType"
+        android:checked="false"
+        android:layout_alignTop="@+id/toLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/paymentAmount"
+        android:layout_below="@+id/toLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="56dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountLabel"
+        android:layout_alignTop="@+id/paymentAmount"
+        android:layout_alignParentStart="true"
+        android:text="Amount" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review Transfer"
+        android:id="@+id/reviewPaymentButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:background="#2b1ec2"
+        android:textColor="#ffffffff" />
+
 </RelativeLayout>

@@ -19,22 +19,20 @@
         android:background="#2b1ec2"
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
-
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textview1"
-            android:text="Front"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Take Photo!"
-            android:id="@+id/button1"/>
-        <ImageView
-            android:id="@+id/imageview1"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:scaleType="centerCrop"/>
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview1"
+        android:text="Front"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Photo!"
+        android:id="@+id/button1"/>
+    <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
 </RelativeLayout>
