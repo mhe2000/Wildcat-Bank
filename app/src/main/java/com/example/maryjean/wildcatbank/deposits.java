@@ -32,7 +32,7 @@ import android.widget.ImageView;
 /**
  * Created by hp1 on 21-01-2015.
  */
-public class deposits extends FragmentActivity {
+public class deposits extends Fragment {
 
 
 

@@ -28,8 +28,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.net.URI;
 import java.util.ResourceBundle;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity  {
+    /*implements welcome.OnFragmentInteractionListener*/
     /**
      * The {@link PagerAdapter} that will provide
      * fragments for each of the sections. We use a
