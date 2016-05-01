@@ -28,7 +28,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.net.URI;
 import java.util.ResourceBundle;
 
-public class MainActivity extends AppCompatActivity implements tab.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity {
 
     /**
      * The {@link PagerAdapter} that will provide
@@ -56,6 +56,40 @@ public class MainActivity extends AppCompatActivity implements tab.OnFragmentInt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        TabLayout tabLayout =
+                (TabLayout) findViewById(R.id.tab_layout);
+
+        tabLayout.addTab(tabLayout.newTab().setText("Accounts"));
+        tabLayout.addTab(tabLayout.newTab().setText("Transfers"));
+        tabLayout.addTab(tabLayout.newTab().setText("Deposits"));
+        tabLayout.addTab(tabLayout.newTab().setText("payments"));
+        tabLayout.addTab(tabLayout.newTab().setText("Spending Habits"));
+        tabLayout.addTab(tabLayout.newTab().setText("Location"));
+
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final PagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+
+        viewPager.setAdapter(adapter);
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+            @Override
+        public void onTabSelected(TabLayout.Tab tab){
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+            @Override
+        public void onTabUnselected(TabLayout.Tab tab){
+
+            }
+            @Override
+        public void onTabReselected(TabLayout.Tab tab){
+
+            }
+        });
 
         //tabLayout.setupWithViewPager(mViewPager);
 
