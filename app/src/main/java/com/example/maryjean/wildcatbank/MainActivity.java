@@ -1,9 +1,11 @@
 package com.example.maryjean.wildcatbank;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
 
+
     public void onFragmentInteraction(Uri uri){
 
     }
@@ -57,18 +61,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         TabLayout tabLayout =
                 (TabLayout) findViewById(R.id.tab_layout);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Accounts"));
-        tabLayout.addTab(tabLayout.newTab().setText("Transfers"));
-        tabLayout.addTab(tabLayout.newTab().setText("Deposits"));
-        tabLayout.addTab(tabLayout.newTab().setText("payments"));
-        tabLayout.addTab(tabLayout.newTab().setText("Spending Habits"));
-        tabLayout.addTab(tabLayout.newTab().setText("Location"));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.account_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.transfers_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.deposits_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.payment_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.spending_icon));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.location_icon));
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         final PagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
@@ -89,7 +94,13 @@ public class MainActivity extends AppCompatActivity {
         public void onTabReselected(TabLayout.Tab tab){
 
             }
-        });}
+        });
+    }
+
+
+
+
+
 
     public void launchDialog(View view){
         android.app.FragmentManager fm = getFragmentManager();
