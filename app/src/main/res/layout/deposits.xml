@@ -20,19 +20,11 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textview1"
-        android:text="Front"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:layout_below="@+id/imageview2"
-        android:layout_alignEnd="@+id/button1" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Take Photo!"
+        android:text="Front"
         android:id="@+id/button1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -46,25 +38,16 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/textview1"
+        android:layout_above="@+id/button1"
         android:layout_below="@+id/deposits_textView"
         android:layout_marginRight="200dp"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="10dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textview2"
-        android:text="Back"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:layout_above="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Take Photo!"
+        android:text="Back"
         android:id="@+id/button2"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -78,9 +61,19 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/textview2"
+        android:layout_above="@+id/button2"
         android:layout_below="@+id/deposits_textView"
         android:layout_marginRight="10dp"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="200dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp"
+        android:background="#2b1ec2"
+        android:textColor="#ffffffff" />
 </RelativeLayout>
