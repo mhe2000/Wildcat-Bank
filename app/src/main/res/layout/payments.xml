@@ -19,25 +19,27 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/payFromLabel"
         android:text="Pay From"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="45dp"
+        android:textSize="23dp"
         android:layout_below="@+id/wildcatBankView"
-        android:layout_alignParentStart="true" />
+        android:layout_toStartOf="@+id/paymentAmount" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/toLabel"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="43dp"
         android:text="Pay To"
+        android:textSize="23dp"
         android:layout_below="@+id/payFromLabel"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/payFromLabel" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -45,15 +47,17 @@
         android:id="@+id/paymentAmount"
         android:layout_below="@+id/toLabel"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="56dp" />
+        android:layout_marginTop="56dp"
+        android:textSize="23dp"/>
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/amountLabel"
+        android:text="Amount"
+        android:textSize="23dp"
         android:layout_alignTop="@+id/paymentAmount"
-        android:layout_alignParentStart="true"
-        android:text="Amount" />
+        android:layout_alignStart="@+id/toLabel" />
 
     <Button
         android:layout_width="wrap_content"
@@ -72,9 +76,9 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button"
-        android:layout_alignTop="@+id/payFromLabel"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/arrow_down"/>
+        android:src="@drawable/arrow_down"
+        android:layout_alignTop="@+id/editText"
+        android:layout_alignStart="@+id/button3" />
 
     <ImageButton
         style="?android:attr/buttonStyleSmall"
@@ -82,25 +86,27 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button3"
-        android:layout_alignTop="@+id/toLabel"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/arrow_down"/>
+        android:src="@drawable/arrow_down"
+        android:layout_marginStart="41dp"
+        android:layout_alignTop="@+id/editText2"
+        android:layout_toEndOf="@+id/reviewPaymentButton" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:text="Checking"
-        android:textSize="20dp"
-        android:layout_alignBottom="@+id/button"
+        android:textSize="23dp"
+        android:layout_marginEnd="43dp"
+        android:layout_alignTop="@+id/payFromLabel"
         android:layout_toStartOf="@+id/button" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
         android:text="Cable"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignStart="@+id/editText"
-        android:textSize="20dp" />
+        android:textSize="23dp"
+        android:layout_above="@+id/paymentAmount"
+        android:layout_alignStart="@+id/editText" />
 </RelativeLayout>
