@@ -40,8 +40,7 @@
         android:layout_alignBottom="@+id/contactButton"
         android:layout_centerHorizontal="true"
         android:background="#2b1ec2"
-        android:textColor="#ffffffff"
-        android:onClick="openLogon"/>
+        android:textColor="#ffffffff" />
 
     <Button
         android:layout_width="wrap_content"

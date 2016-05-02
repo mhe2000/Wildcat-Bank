@@ -15,4 +15,10 @@
     <string name="signIn_button">Sign In</string>
     <string name="locate_button">Locate</string>
     <string name="wildcatBank_text_view">Wildcat Bank</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="available_dollar">$1286.00</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="current_dollar">$1337.00</string>
+    <string name="marketBasket">Market Basket</string>
+    <string name="marketBasket_dollar">$14.05</string>
 </resources>

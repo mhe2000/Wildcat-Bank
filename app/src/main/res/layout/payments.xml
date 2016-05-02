@@ -37,24 +37,6 @@
         android:layout_below="@+id/payFromLabel"
         android:layout_alignParentStart="true" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Account Type"
-        android:id="@+id/fromAccountType"
-        android:checked="false"
-        android:layout_alignBottom="@+id/payFromLabel"
-        android:layout_toEndOf="@+id/reviewPaymentButton" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bill"
-        android:id="@+id/billType"
-        android:checked="false"
-        android:layout_alignTop="@+id/toLabel"
-        android:layout_alignEnd="@+id/fromAccountType" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,4 +65,42 @@
         android:layout_marginBottom="62dp"
         android:textColor="#ffffffff"
         android:background="#2b1ec2" />
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/payFromLabel"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/arrow_down"/>
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button3"
+        android:layout_alignTop="@+id/toLabel"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/arrow_down"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="Checking"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:text="Cable"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignStart="@+id/editText"
+        android:textSize="20dp" />
 </RelativeLayout>

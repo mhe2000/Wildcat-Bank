@@ -20,4 +20,6 @@ public class payments extends Fragment {
         View v =inflater.inflate(R.layout.payments,container,false);
         return v;
     }
+
+
 }

@@ -32,47 +32,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/toLabel"
-        android:layout_marginTop="44dp"
         android:text="Transfer To"
-        android:layout_below="@+id/payFromLabel"
+        android:layout_below="@+id/editText"
         android:layout_alignParentStart="true" />
 
-    <RadioButton
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account Type"
-        android:id="@+id/fromAccount"
-        android:checked="false"
+        android:text="New Button"
+        android:id="@+id/button"
         android:layout_alignTop="@+id/payFromLabel"
-        android:layout_alignStart="@+id/billType" />
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/arrow_down"/>
 
-    <RadioButton
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account Type"
-        android:id="@+id/billType"
-        android:checked="false"
+        android:text="New Button"
+        android:id="@+id/button3"
         android:layout_alignTop="@+id/toLabel"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="27dp" />
+        android:src="@drawable/arrow_down"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/paymentAmount"
-        android:layout_below="@+id/toLabel"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="56dp" />
+        android:id="@+id/editText"
+        android:text="Checking"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toStartOf="@+id/button" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/amountLabel"
-        android:layout_alignTop="@+id/paymentAmount"
-        android:layout_alignParentStart="true"
-        android:text="Amount" />
+        android:id="@+id/editText2"
+        android:text="Savings"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignStart="@+id/editText"
+        android:textSize="20dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -84,5 +84,75 @@
         android:layout_marginBottom="62dp"
         android:background="#2b1ec2"
         android:textColor="#ffffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/paymentAmount"
+        android:layout_alignTop="@+id/amountLabel"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountLabel"
+        android:text="Amount"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Date"
+        android:id="@+id/DateTextView"
+        android:textSize="18dp"
+        android:layout_alignTop="@+id/TimeTextView"
+        android:layout_alignEnd="@+id/reviewPaymentButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Time"
+        android:id="@+id/TimeTextView"
+        android:textSize="18dp"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_alignEnd="@+id/amountLabel" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/arrow_down"
+        android:layout_below="@+id/amountLabel"
+        android:layout_toEndOf="@+id/toLabel"
+        android:layout_marginTop="39dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/arrow_down"
+        android:layout_alignTop="@+id/DateTextView"
+        android:layout_toStartOf="@+id/button3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:layout_below="@+id/TimeTextView"
+        android:layout_alignStart="@+id/TimeTextView"
+        android:layout_toStartOf="@+id/imageButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:layout_below="@+id/DateTextView"
+        android:layout_alignStart="@+id/DateTextView"
+        android:layout_toStartOf="@+id/imageButton2" />
 
 </RelativeLayout>
