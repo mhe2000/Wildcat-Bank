@@ -150,6 +150,18 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_location) {
             viewPager.setCurrentItem(5);
         }
+        if (id == R.id.nav_setting) {
+            viewPager.setCurrentItem(6);
+        } else if (id == R.id.nav_exit) {
+            if(android.os.Build.VERSION.SDK_INT >= 21)
+            {
+                finishAndRemoveTask();
+            }
+            else
+            {
+                finish();
+            }
+        }
         // Add more else if statements here for additional menu items
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

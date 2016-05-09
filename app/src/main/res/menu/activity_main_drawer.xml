@@ -44,5 +44,19 @@
             android:title="Location"
             android:icon="@drawable/location_icon"/>
     </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp7">
+        <item
+            android:id="@+id/nav_setting"
+            android:title="Settings"
+            android:icon="@drawable/location_icon"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp8">
+        <item
+            android:id="@+id/nav_exit"
+            android:title="Exit"
+            android:icon="@drawable/location_icon"/>
+    </group>
 
 </menu>
