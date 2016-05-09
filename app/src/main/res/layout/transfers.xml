@@ -100,11 +100,13 @@
         android:layout_height="wrap_content"
         android:text="Review Transfer"
         android:id="@+id/reviewPaymentButton"
-        android:background="#2b1ec2"
         android:textColor="#ffffffff"
+        android:background="@drawable/fancy_button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp"/>
+        android:layout_marginBottom="62dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 
     <EditText
         android:layout_width="wrap_content"

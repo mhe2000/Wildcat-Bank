@@ -38,7 +38,7 @@
         android:layout_below="@+id/payFromLabel"
         android:layout_alignStart="@+id/payFromLabel" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -67,7 +67,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="62dp"
         android:textColor="#ffffffff"
-        android:background="#2b1ec2" />
+        android:background="@drawable/fancy_button"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 
     <ImageButton
         style="?android:attr/buttonStyleSmall"
