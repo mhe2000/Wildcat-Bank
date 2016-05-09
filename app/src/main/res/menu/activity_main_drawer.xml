@@ -49,14 +49,14 @@
         <item
             android:id="@+id/nav_setting"
             android:title="Settings"
-            android:icon="@drawable/location_icon"/>
+            android:icon="@drawable/settings_icon"/>
     </group>
     <group android:checkableBehavior="single"
         android:id="@+id/grp8">
         <item
             android:id="@+id/nav_exit"
             android:title="Exit"
-            android:icon="@drawable/location_icon"/>
+            android:icon="@drawable/logout_icon"/>
     </group>
 
 </menu>
